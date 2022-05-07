@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    min-width: 1800px;
+}
+
+.container{
+    height: 800px;
+    max-width: 1800px;
+    margin:20px auto 0;
+    background: url("../assets/area.webp") no-repeat center;
+    background-size: cover;
+}
+
+.area{
+    max-width: 100%;
+    height: 800px;
+    padding: 0 100px;
+    position: absolute;
+}
+
+.ball{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: url("../assets/ball.jpg") no-repeat center;
+    background-size: cover;
+    animation: animate 4s  infinite;
+    position: relative;
+}
+
+.game{
+    height: 80px;
+    width: 60px;
+    background: url("https://cdn.pesmaster.com/players/pes-2021/player_21011456_l.png") no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+
+.player2{
+    top: 500px;
+    bottom: 70px;
+    left: 450px; 
+}
+
+.player3{
+    top: -180px;
+    left: 980px; 
+}
+
+.player4{
+    top: 210px;
+    left: 1260px; 
+}
+
+@keyframes animate{
+    0% {
+        top: 100px;
+        left: 30px;
+        transform: rotate(0deg);
+    }
+
+    30%{
+        top: 650px;
+        bottom: 70px;
+        left: 500px;        
+        transform: rotate(90deg);
+    }
+
+    60%{
+        top: 70px;
+        left: 1000px;
+        transform: rotate(180deg);
+    }
+
+    80%{
+        top: 500px;
+        left: 1300px;
+        transform: rotate(270deg);
+    }
+
+    100% {
+        top: 300px;
+        left: 1600px;
+        transform: rotate(360deg);
+    }
+}
+
+.goalkeeper{
+    top: 10px;
+    left: 1550px;
+    animation: run 1s infinite;
+}
+
+@keyframes run{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-70px);
+    }
+    100%{
+        transform: translateY(20px);
+    }
+}
